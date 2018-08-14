@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/ -->
+<html lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>Configure a Spring MVC Project with Intellij IDEA | In My Own Write</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://iamsaurabh.wordpress.com/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="https://s2.wp.com/wp-content/themes/pub/chateau/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="dns-prefetch" href="https://s2.wp.com/">
+<link rel="dns-prefetch" href="https://s1.wp.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://s.pubmine.com/">
+<link rel="dns-prefetch" href="https://x.bidswitch.net/">
+<link rel="dns-prefetch" href="https://static.criteo.net/">
+<link rel="dns-prefetch" href="https://ib.adnxs.com/">
+<link rel="dns-prefetch" href="https://aax.amazon-adsystem.com/">
+<link rel="dns-prefetch" href="https://bidder.criteo.com/">
+<link rel="dns-prefetch" href="https://cas.criteo.com/">
+<link rel="dns-prefetch" href="https://gum.criteo.com/">
+<link rel="dns-prefetch" href="https://ads.pubmatic.com/">
+<link rel="dns-prefetch" href="https://gads.pubmatic.com/">
+<link rel="dns-prefetch" href="https://tpc.googlesyndication.com/">
+<link rel="dns-prefetch" href="https://ad.doubleclick.net/">
+<link rel="dns-prefetch" href="https://googleads.g.doubleclick.net/">
+<link rel="dns-prefetch" href="https://www.googletagservices.com/">
+<link rel="dns-prefetch" href="https://cdn.switchadhub.com/">
+<link rel="dns-prefetch" href="https://delivery.g.switchadhub.com/">
+<link rel="dns-prefetch" href="https://delivery.swid.switchadhub.com/">
+<link rel="alternate" type="application/rss+xml" title="In My Own Write » Feed" href="https://iamsaurabh.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="In My Own Write » Comments Feed" href="https://iamsaurabh.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="In My Own Write » Configure a Spring MVC Project with Intellij IDEA Comments Feed" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/feed/">
+	<script src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/client.js.tải xuống" async="" type="text/javascript"></script><script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1532082729h&ver=4.9.8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/wp-emoji-release.min.js.tải xuống" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="all-css-0-1" href="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/saved_resource(1)" type="text/css" media="all">
+<link rel="stylesheet" id="print-css-1-1" href="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/global-print.css" type="text/css" media="print">
+<link rel="stylesheet" id="all-css-2-1" href="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/saved_resource(2)" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/saved_resource(3)"></script>
+<link rel="stylesheet" id="all-css-0-2" href="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/style(1).css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://iamsaurabh.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="CalHacks" href="https://iamsaurabh.wordpress.com/2016/11/17/calhacks/">
+<link rel="next" title="Weekend Project – Amazon Alexa skill" href="https://iamsaurabh.wordpress.com/2017/04/08/weekend-project-amazon-alexa-skill/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/">
+<link rel="shortlink" href="https://wp.me/pDb9G-5y">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fiamsaurabh.wordpress.com%2F2017%2F02%2F11%2Fconfigure-a-spring-mvc-project-with-intellij-idea%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fiamsaurabh.wordpress.com%2F2017%2F02%2F11%2Fconfigure-a-spring-mvc-project-with-intellij-idea%2F&amp;for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Configure a Spring MVC Project with Intellij IDEA">
+<meta property="og:url" content="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/">
+<meta property="og:description" content="For a school project, I had to use the Spring MVC Framework, and I found it an absolute nightmare to get it to work. For first thoughts, I am not very familiar with tools like Maven (and even the I…">
+<meta property="article:published_time" content="2017-02-11T20:38:37+00:00">
+<meta property="article:modified_time" content="2017-02-11T20:38:37+00:00">
+<meta property="og:site_name" content="In My Own Write">
+<meta property="og:image" content="https://iamsaurabh.files.wordpress.com/2017/02/with_spring.png">
+<meta property="og:image:width" content="1360">
+<meta property="og:image:height" content="760">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:creator" content="@saurabhsood91">
+<meta name="twitter:site" content="@saurabhsood91">
+<meta name="twitter:text:title" content="Configure a Spring MVC Project with Intellij IDEA">
+<meta name="twitter:card" content="summary">
+<meta property="fb:app_id" content="249643311490">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="https://s2.wp.com/i/webclip.png">
+<link rel="openid.server" href="https://iamsaurabh.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="https://iamsaurabh.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="https://iamsaurabh.wordpress.com/osd.xml" title="In My Own Write">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+<style type="text/css">
+.widget_twitter li {
+	word-wrap: break-word;
+}
+</style>
+<meta name="application-name" content="In My Own Write"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Thoughts meander like a restless wind inside a letterbox"><meta name="msapplication-task" content="name=Subscribe;action-uri=https://iamsaurabh.wordpress.com/feed/;icon-uri=https://s1.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s1.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico"><meta name="description" content="For a school project, I had to use the Spring MVC Framework, and I found it an absolute nightmare to get it to work. For first thoughts, I am not very familiar with tools like Maven (and even the Intellij IDE), so it naturally took longer. Additionally, most of the tutorials I followed on the…">
+		<script type="text/javascript">
+		function __ATA_CC() {var v = document.cookie.match('(^|;) ?personalized-ads-consent=([^;]*)(;|$)');return v ? 1 : 0;}
+		var __ATA_PP = { pt: 1, ht: 0, tn: 'chateau', amp: false, siteid: 8982, consent: __ATA_CC() };
+		var __ATA = __ATA || {};
+		__ATA.cmd = __ATA.cmd || [];
+		__ATA.criteo = __ATA.criteo || {};
+		__ATA.criteo.cmd = __ATA.criteo.cmd || [];
+		</script>
+		<script type="text/javascript" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/head.js.tải xuống" async=""></script><link rel="amphtml" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/amp/"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script type="text/javascript" async="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/ga.js.tải xuống"></script>
+<style type="text/css"></style><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/services.css"><script type="text/javascript" async="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/saved_resource(4)"></script><script type="text/javascript" async="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/saved_resource(5)"></script><script src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/outstream.js.tải xuống" async=""></script><style type="text/css">.iowo-adv {overflow: hidden;}.iowo-adv__header {font-family: "Helvetica", Arial, sans-serif !important;font-size: 11.5px !important;text-align: center;position: relative;padding: 5px 0px;letter-spacing: 0.3px !important;font-weight: 300 !important;text-transform: uppercase;color: #aaa}.iowo-adv__close-icon {width: 24px;height: 24px;position: absolute;right: 10px;top: 34px;z-index:10;cursor: pointer;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4gMQDS4lyDpzXgAAAKlJREFUWMPVV1sOgCAMo9yZU3Bo/THGRKaylTXuF9YW9mCgtbaVw3rvKAl25azWQgb5TcBqESNsWAvscFgceNuwkvy8gZUi3jAx68AkHwpgifiKgShA1BcsIK8PmKfxCKZdqTdkYCRVJF/CmT2ymYoBo7Yj5UprMN6GVYvY/hUCaRJKy1DaiKStWPoYSZ9j6UAiHcmkQ6l0LJd+TDLIn0TULHILu2aRWxw7NqDQ4pqt7KcAAAAASUVORK5CYII=");background-size: contain;}.iowo-adv__close-icon_touch {left: 10px;}.iowo-adv__sound-icon {width: 32px;cursor: pointer;height: 32px;position: absolute;bottom:12px;right:5px;}.iowo-adv__sound-icon_on {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QYcDigM2jawiwAAAbhJREFUWMPtl7FLHFEQxr+ZtwTytLDwmjSnhf+AYrpUBwGvS7F2YqFNQNjieCnsTlPscdxdZ2MVCORIEewMwf/AlEkRCRaSKqQMCrnbGZtVLPRye2/dJcSpdos33292vjfvLfAQ/3tQHkkajcYqM68YY3bjOD7NsjbwFXfOhSLyDgAPBgMBsJFlPXuK10TkLTNf5ZnKmoM9PvuSqh4w8yOfInjCyhcAHBLRtG8LeQLxJyLyiZkreRg4E0AURTOq+pGZ5/LahsEodwN4A+Dxfc6BUdsw9BF3zkWqOq2q+51O5+ckLWDP4p4R0Wtm/uqcW7wvkXFiVkT6YRiaQgGGw+Gaqn4AAGZeqFarTwsF6PV6F0R0eH3oEFUKBXDO1QBsX70bY74U7YGXAObT5/5dp2QRJuyLyGbmOaCq50Re14XYGPPqb/eDOwGCINhJkkRvHrGqOkNEtXHU2+32Z69JGMfxdwDrt5hrL+1vLpHZA9baLQDvSwNoNptirV0DcFQKQArxx1r7AsBxKQApxO8kSeoi8q0UAADodru/giB4LiI/0pl/UigAALRarTMiWhaRurV25+FX65+LSxNniSadskJNAAAAAElFTkSuQmCC");}.iowo-adv__sound-icon_off {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAdBJREFUWIXt1b9r1GAcx/HP840u94jo6mD/Aae24I9NHZSCi5NDO5TO7fLkCTgdt15y4C6IdHFwEpxscRHc1dHB0UFBOvToks/Xxch53j3JExNB6XcMz+X1Ti5PApzO/zLD4fBMm99JF7hzbm86nZ6kafp02Rrv/apz7mrnAd77LRF5BCBR1fvLcJKHIvIqy7JrnQV47zdIPgFgAEBEfjvfDH4RwHmSW50EZFl2g+RzEfn535P8FsABYN9au/vHAc65K2VZvhSRwQz+JUmSjRA+GAy2R6MRZ89lWuArAN6KyKU5/PZ4PP4QgwNAcOs4524ZYy7/UmzMQwBLcefcGsmDJjgQuAPe+5sAXocCF+EAGuNA4BlQ1ZW+8WDA38BbBXSJRwfU4SSnMThQswvqcBE5BHChWiMiGoMDDe9AE7zt1Ab0idcG9I0HA0i+6xsHGn4LvPfrAA4a4Md5np+LCah9BuZxVX1G8mMM0jpgwZXvW2s3AdwB8LnXgEV49ZKZTCafVPUuyaNeAkJ4taYoivcico/kSacBTfBq8jx/Y4x5AKD8caicXxMdoKpnSSZ1eDVFUbwwxuwA+Kqqj2MDFm7DNE2vA9i01u7GvttP55+b71U6NuXe6u9vAAAAAElFTkSuQmCC");}.iowo-adv__timer {position: absolute;bottom:5px;left:5px;min-width: 60px;padding: 3px;color: #aaaaaa;border-radius: 5px;font-family: sans-serif;text-align: center;background-color:black;z-index:10;}.iowo-timeline {position: absolute;bottom:0;left:0;width: 100%;height: 5px;background-color: rgba(0, 0, 0, 0.2);}.iowo-timeline__runner {position: relative;height: 5px;background-color: red;-moz-transition: .5s;-ms-transition: .5s;-o-transition: .5s;-webkit-transition: .5s;transition: .5s;transition-property: max-width;}</style><script src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/ima3.js.tải xuống"></script><link rel="preload" href="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/f.txt" as="script"><script type="text/javascript" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/f.txt"></script></head>
+
+<body class="post-template-default single single-post postid-344 single-format-standard mp6 customizer-styles-applied two-column sidebar-content highlander-enabled highlander-light">
+<div id="page" class="hfeed">
+		<div id="page-inner">
+		<header id="branding" role="banner">
+			<nav id="menu" role="navigation">
+				<ul class="menu clear-fix">
+<li class="page_item page-item-111"><a href="https://iamsaurabh.wordpress.com/about-me/">About Me</a></li>
+</ul>
+			</nav><!-- end #menu -->
+
+			<div id="main-title">
+				<hgroup>
+					<h1 id="site-title"><a href="https://iamsaurabh.wordpress.com/" title="In My Own Write" rel="home">In My Own Write</a></h1>
+												<h2 id="site-description">~ Thoughts meander like a restless wind inside a letterbox</h2>
+									</hgroup>
+			</div><!-- end #main-title -->
+
+							<div id="search">
+					
+<form method="get" action="https://iamsaurabh.wordpress.com//">
+	<div>
+		<label for="s" class="assistive-text">Search:</label>
+		<input type="text" value="Search…" name="s" id="s" onfocus="this.value=&#39;&#39;">
+		<input type="submit" name="search" value="Go">
+	</div>
+</form>
+				</div><!-- end #search -->
+			
+			<div id="main-image">
+							<a href="https://iamsaurabh.wordpress.com/">
+													<img src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/chateau-default.jpg" width="960" height="260" alt="In My Own Write" title="In My Own Write" scale="0">
+									</a>
+						</div><!-- end #main-image -->
+		</header><!-- #branding -->
+		<div id="main" class="clear-fix">
+
+	<div id="primary">
+		<div id="content" class="clear-fix">
+
+		
+			<article id="post-344" class="post-344 post type-post status-publish format-standard hentry category-development">
+	<header class="post-title">
+				<h1>Configure a Spring MVC Project with Intellij&nbsp;IDEA</h1>			<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/" class="post-permalink">		<p class="post-date">
+			<strong>11</strong>
+			<em>Saturday</em>
+			<span>Feb 2017</span>
+		</p>
+	</a>
+	<div class="post-info clear-fix">
+		<p>
+			Posted <span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://iamsaurabh.wordpress.com/author/iamsaurabh/" title="View all posts by Saurabh" rel="author">Saurabh</a></span></span> in <a href="https://iamsaurabh.wordpress.com/category/development/" rel="category tag">Development</a>		</p>
+		<p class="post-com-count">
+			<strong>≈ <a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comments">20 Comments</a></strong>
+		</p>
+	</div><!-- end .post-info -->
+	</header><!-- end .post-title -->
+
+	<div class="post-content clear-fix">
+			<div class="post-extras">
+					</div><!-- end .post-extras -->
+
+		<div class="post-entry">
+			<p>For a school project, I had to use the Spring MVC Framework, and I found it an absolute nightmare to get it to work. For first thoughts, I am not very familiar with tools like Maven (and even the Intellij IDE), so it naturally took longer. Additionally, most of the tutorials I followed on the internet did not work for me, and I was running into some or the other issues.</p>
+<p>This post is a sort of self documentation, so that I know the steps I need to follow, to get up and running with Spring MVC with minimal configuration. I document two methods to get Spring MVC to work with Intellij. The first one uses the Spring MVC template that is there in Intellij, whereas the second one uses Maven. As I don’t have that much experience with using Maven, and Spring, I probably can’t recommend one method over another. I am using Intellij IDEA 2016.3 (Ultimate Edition). This could be downloaded at <a href="https://www.jetbrains.com/idea/">Jetbrains</a> (The Ultimate edition has a free trial for 30 days, though you could get a licence with a University ID).</p>
+<p><span style="text-decoration:underline;"><strong>Using Spring MVC Template:</strong></span></p>
+<p>1.) Create a new project, and select the Spring template, with the Spring MVC option checked. Intellij will create a new project for you</p>
+<p><a href="https://iamsaurabh.files.wordpress.com/2017/02/with_spring.png"><img data-attachment-id="348" data-permalink="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/with_spring/" data-orig-file="https://iamsaurabh.files.wordpress.com/2017/02/with_spring.png" data-orig-size="1360,760" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="with_spring" data-image-description="" data-medium-file="https://iamsaurabh.files.wordpress.com/2017/02/with_spring.png?w=300&amp;h=168" data-large-file="https://iamsaurabh.files.wordpress.com/2017/02/with_spring.png?w=529" class="alignnone size-medium wp-image-348" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/with_spring.png" alt="with_spring" width="300" height="168" srcset="https://iamsaurabh.files.wordpress.com/2017/02/with_spring.png?w=300&amp;h=168 300w, https://iamsaurabh.files.wordpress.com/2017/02/with_spring.png?w=600&amp;h=336 600w, https://iamsaurabh.files.wordpress.com/2017/02/with_spring.png?w=150&amp;h=84 150w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p>2.) In the web/WEB-INF/<span class="skimlinks-unlinked">web.xml</span> file, change the following mapping</p>
+<pre>&lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;*.form&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;</pre>
+<p>to</p>
+<pre>&lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;</pre>
+<p>3.) Go to Project Structure, and select the Problems section. There should be 2 problems that you need to fix. Fix both problems, and click Apply to persist the changes.</p>
+<p><a href="https://iamsaurabh.files.wordpress.com/2017/02/problems.png"><img data-attachment-id="346" data-permalink="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/problems/" data-orig-file="https://iamsaurabh.files.wordpress.com/2017/02/problems.png" data-orig-size="1040,694" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="problems" data-image-description="" data-medium-file="https://iamsaurabh.files.wordpress.com/2017/02/problems.png?w=300&amp;h=200" data-large-file="https://iamsaurabh.files.wordpress.com/2017/02/problems.png?w=529" class="alignnone size-medium wp-image-346" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/problems.png" alt="problems" width="300" height="200" srcset="https://iamsaurabh.files.wordpress.com/2017/02/problems.png?w=300&amp;h=200 300w, https://iamsaurabh.files.wordpress.com/2017/02/problems.png?w=600&amp;h=400 600w, https://iamsaurabh.files.wordpress.com/2017/02/problems.png?w=150&amp;h=100 150w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<ul>
+<li>Add Spring-4.3.6-RELEASE to artifact</li>
+<li>Add Spring MVC-4.3.6-RELEASE to artifact</li>
+</ul>
+<p>4.) Create a controller class in src. I have created a class called ‘IndexController’.</p>
+<pre>package org.saurabhsood.controllers;
+
+import org.springframework.stereotype.Controller;
+import <span class="skimlinks-unlinked">org.springframework.ui.Model</span>;
+import <span class="skimlinks-unlinked">org.springframework.web.bind.annotation.GetMapping</span>;
+
+/**
+ * Created by saurabh on 2/11/17.
+ */
+
+@Controller
+public class IndexController {
+    @GetMapping("/")
+    public String index(Model m) {
+        m.addAttribute("someAttribute", "someValue");
+        return "index";
+    }
+}</pre>
+<p>5.)&nbsp;Edit the web/WEB-INF/<span class="skimlinks-unlinked">dispatcher-servlet.xml</span> file, and make it look like this:</p>
+<p><code><br>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br>
+&lt;beans xmlns="http://www.springframework.org/schema/beans"<br>
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"<br>
+xmlns:context="http://www.springframework.org/schema/context"<br>
+xmlns:mvc="http://www.springframework.org/schema/mvc"<br>
+xsi:schemaLocation="http://www.springframework.org/schema/beans <a href="http://www.springframework.org/schema/beans/spring-beans.xsd" rel="nofollow">http://www.springframework.org/schema/beans/spring-beans.xsd</a> <a href="http://www.springframework.org/schema/context" rel="nofollow">http://www.springframework.org/schema/context</a> <a href="http://www.springframework.org/schema/context/spring-context.xsd" rel="nofollow">http://www.springframework.org/schema/context/spring-context.xsd</a> <a href="http://www.springframework.org/schema/mvc" rel="nofollow">http://www.springframework.org/schema/mvc</a> <a href="http://www.springframework.org/schema/mvc/spring-mvc.xsd" rel="nofollow">http://www.springframework.org/schema/mvc/spring-mvc.xsd</a>"&gt;</code></p>
+<p>&lt;mvc:annotation-driven /&gt;<br>
+&lt;context:component-scan base-package=”org.saurabhsood.controllers” /&gt;</p>
+<p>&lt;bean class=”org.springframework.web.servlet.view.InternalResourceViewResolver”&gt;<br>
+&lt;property name=”prefix” value=”/WEB-INF/views/” /&gt;<br>
+&lt;property name=”suffix” value=”.jsp” /&gt;<br>
+&lt;/bean&gt;<br>
+&lt;/beans&gt;</p>
+<p>&nbsp;</p>
+<p>6.) Create a directory called views in WEB-INF and move <span class="skimlinks-unlinked">index.jsp</span> there. Edit <span class="skimlinks-unlinked">index.jsp</span>, and add the following code, to display the variable we added to the Model</p>
+<pre>&lt;p&gt;${someAttribute}&lt;/p&gt;</pre>
+<p>7.) Run -&gt; Edit Configurations-&gt; Add Local Tomcat Server. I already had Tomcat in /opt/tomcat, and just pointed Intellij to that directory. Give it a name like Tomcat.</p>
+<p><a href="https://iamsaurabh.files.wordpress.com/2017/02/tomcat.png"><img data-attachment-id="347" data-permalink="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/tomcat/" data-orig-file="https://iamsaurabh.files.wordpress.com/2017/02/tomcat.png" data-orig-size="1019,743" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="tomcat" data-image-description="" data-medium-file="https://iamsaurabh.files.wordpress.com/2017/02/tomcat.png?w=300&amp;h=219" data-large-file="https://iamsaurabh.files.wordpress.com/2017/02/tomcat.png?w=529" class="alignnone size-medium wp-image-347" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/tomcat.png" alt="tomcat" width="300" height="219" srcset="https://iamsaurabh.files.wordpress.com/2017/02/tomcat.png?w=300&amp;h=219 300w, https://iamsaurabh.files.wordpress.com/2017/02/tomcat.png?w=600&amp;h=438 600w, https://iamsaurabh.files.wordpress.com/2017/02/tomcat.png?w=150&amp;h=109 150w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p>8.) Look at the Warnings section. There will be some warnings. Click on Fix to fix the warnings. Click on Apply.</p>
+<p>9.) Finally, Run the application. If you did everything correctly, you should have the model value shown on the JSP page.</p>
+<p><a href="https://iamsaurabh.files.wordpress.com/2017/02/output-spring.png"><img data-attachment-id="345" data-permalink="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/output-spring/" data-orig-file="https://iamsaurabh.files.wordpress.com/2017/02/output-spring.png" data-orig-size="1016,334" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="output-spring" data-image-description="" data-medium-file="https://iamsaurabh.files.wordpress.com/2017/02/output-spring.png?w=300&amp;h=99" data-large-file="https://iamsaurabh.files.wordpress.com/2017/02/output-spring.png?w=529" class="alignnone size-medium wp-image-345" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/output-spring.png" alt="output-spring" width="300" height="99" srcset="https://iamsaurabh.files.wordpress.com/2017/02/output-spring.png?w=300&amp;h=99 300w, https://iamsaurabh.files.wordpress.com/2017/02/output-spring.png?w=600&amp;h=198 600w, https://iamsaurabh.files.wordpress.com/2017/02/output-spring.png?w=150&amp;h=49 150w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p><strong>With Maven</strong></p>
+<p>1.) Create New Project -&gt; Maven Project. Do not select an archetype right now. In the next screen, add an artifact ID and Group ID</p>
+<p><a href="https://iamsaurabh.files.wordpress.com/2017/02/1.png"><img data-attachment-id="349" data-permalink="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/attachment/1/" data-orig-file="https://iamsaurabh.files.wordpress.com/2017/02/1.png" data-orig-size="1021,738" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="1" data-image-description="" data-medium-file="https://iamsaurabh.files.wordpress.com/2017/02/1.png?w=300&amp;h=217" data-large-file="https://iamsaurabh.files.wordpress.com/2017/02/1.png?w=529" class="alignnone size-medium wp-image-349" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/1.png" alt="1" width="300" height="217" srcset="https://iamsaurabh.files.wordpress.com/2017/02/1.png?w=300&amp;h=217 300w, https://iamsaurabh.files.wordpress.com/2017/02/1.png?w=600&amp;h=434 600w, https://iamsaurabh.files.wordpress.com/2017/02/1.png?w=150&amp;h=108 150w" sizes="(max-width: 300px) 100vw, 300px"></a> <a href="https://iamsaurabh.files.wordpress.com/2017/02/2-create.png"><img data-attachment-id="350" data-permalink="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/2-create/" data-orig-file="https://iamsaurabh.files.wordpress.com/2017/02/2-create.png" data-orig-size="1013,731" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="2-create" data-image-description="" data-medium-file="https://iamsaurabh.files.wordpress.com/2017/02/2-create.png?w=300&amp;h=216" data-large-file="https://iamsaurabh.files.wordpress.com/2017/02/2-create.png?w=529" class="alignnone size-medium wp-image-350" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/2-create.png" alt="2-create" width="300" height="216" srcset="https://iamsaurabh.files.wordpress.com/2017/02/2-create.png?w=300&amp;h=216 300w, https://iamsaurabh.files.wordpress.com/2017/02/2-create.png?w=600&amp;h=432 600w, https://iamsaurabh.files.wordpress.com/2017/02/2-create.png?w=150&amp;h=108 150w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p>2.) When the project gets created, the <span class="skimlinks-unlinked">pom.xml</span> file gets opened. Intellij also gives a message saying ‘Maven projects need to be imported’. Select ‘Enable Auto-Import’.</p>
+<p>3.) Add the following to the <span class="skimlinks-unlinked">pom.xml</span> file inside the &lt;project&gt; tag:</p>
+<p>&lt;packaging&gt;war&lt;/packaging&gt;</p>
+<p>&lt;properties&gt;<br>
+&lt;spring.version&gt;4.3.0.RELEASE&lt;/spring.version&gt;<br>
+&lt;/properties&gt;</p>
+<p>&lt;dependencies&gt;<br>
+&lt;dependency&gt;<br>
+&lt;groupId&gt;org.springframework&lt;/groupId&gt;<br>
+&lt;artifactId&gt;spring-core&lt;/artifactId&gt;<br>
+&lt;version&gt;${spring.version}&lt;/version&gt;<br>
+&lt;/dependency&gt;</p>
+<p>&lt;dependency&gt;<br>
+&lt;groupId&gt;org.springframework&lt;/groupId&gt;<br>
+&lt;artifactId&gt;spring-web&lt;/artifactId&gt;<br>
+&lt;version&gt;${spring.version}&lt;/version&gt;<br>
+&lt;/dependency&gt;</p>
+<p>&lt;dependency&gt;<br>
+&lt;groupId&gt;org.springframework&lt;/groupId&gt;<br>
+&lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;<br>
+&lt;version&gt;${spring.version}&lt;/version&gt;<br>
+&lt;/dependency&gt;<br>
+&lt;/dependencies&gt;</p>
+<p>Maven will auto import the modules for you</p>
+<p>4.) Create a webapp/WEB-INF directory inside ‘main’<br>
+5.) Create a <span class="skimlinks-unlinked">web.xml</span> file in WEB-INF</p>
+<p>6.) Add the following code to the <span class="skimlinks-unlinked">web.xml</span> file:<br>
+<code><br>
+&lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;</code></p>
+<p>&lt;web-app xmlns=”<a href="http://java.sun.com/xml/ns/j2ee&amp;#8221" rel="nofollow">http://java.sun.com/xml/ns/j2ee&amp;#8221</a>;<br>
+xmlns:xsi=”<a href="http://www.w3.org/2001/XMLSchema-instance&amp;#8221" rel="nofollow">http://www.w3.org/2001/XMLSchema-instance&amp;#8221</a>;<br>
+xsi:schemaLocation=”<a href="http://java.sun.com/xml/ns/j2ee" rel="nofollow">http://java.sun.com/xml/ns/j2ee</a> <a href="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&amp;#8221" rel="nofollow">http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&amp;#8221</a>;<br>
+version=”2.4″&gt;</p>
+<p>&lt;display-name&gt;HelloWorld Application&lt;/display-name&gt;<br>
+&lt;description&gt;<br>
+This is a simple web application with a source code organization<br>
+based on the recommendations of the Application Developer’s Guide.<br>
+&lt;/description&gt;</p>
+<p>&lt;context-param&gt;<br>
+&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;<br>
+&lt;param-value&gt;/WEB-INF/dispatcher-servlet.xml&lt;/param-value&gt;<br>
+&lt;/context-param&gt;<br>
+&lt;listener&gt;<br>
+&lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;<br>
+&lt;/listener&gt;<br>
+&lt;servlet&gt;<br>
+&lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;<br>
+&lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;<br>
+&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;<br>
+&lt;/servlet&gt;<br>
+&lt;servlet-mapping&gt;<br>
+&lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;<br>
+&lt;url-pattern&gt;/&lt;/url-pattern&gt;<br>
+&lt;/servlet-mapping&gt;</p>
+<p>&lt;/web-app&gt;</p>
+<p>7.) In WEB-INF, create a file called <span class="skimlinks-unlinked">dispatcher-servlet.xml</span>. Add the following code</p>
+<p><code><br>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br>
+&lt;beans xmlns="http://www.springframework.org/schema/beans"<br>
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"<br>
+xmlns:context="http://www.springframework.org/schema/context"<br>
+xmlns:mvc="http://www.springframework.org/schema/mvc"<br>
+xsi:schemaLocation="http://www.springframework.org/schema/beans <a href="http://www.springframework.org/schema/beans/spring-beans.xsd" rel="nofollow">http://www.springframework.org/schema/beans/spring-beans.xsd</a> <a href="http://www.springframework.org/schema/context" rel="nofollow">http://www.springframework.org/schema/context</a> <a href="http://www.springframework.org/schema/context/spring-context.xsd" rel="nofollow">http://www.springframework.org/schema/context/spring-context.xsd</a> <a href="http://www.springframework.org/schema/mvc" rel="nofollow">http://www.springframework.org/schema/mvc</a> <a href="http://www.springframework.org/schema/mvc/spring-mvc.xsd" rel="nofollow">http://www.springframework.org/schema/mvc/spring-mvc.xsd</a>"&gt;</code></p>
+<p>&lt;mvc:annotation-driven /&gt;<br>
+&lt;context:component-scan base-package=”org.saurabhsood.controllers” /&gt;</p>
+<p>&lt;bean class=”org.springframework.web.servlet.view.InternalResourceViewResolver”&gt;<br>
+&lt;property name=”prefix” value=”/WEB-INF/views/” /&gt;<br>
+&lt;property name=”suffix” value=”.jsp” /&gt;<br>
+&lt;/bean&gt;</p>
+<p>&lt;/beans&gt;</p>
+<p><strong>Notice the base-package attribute for context. You should change this to the package that contains your controllers (which you create in the next step)</strong></p>
+<p>8.) Create the package which you specified in the <span class="skimlinks-unlinked">dispatcher-servlet.xml</span>. I created a class called IndexController. I had the following code:</p>
+<pre>package org.saurabhsood.controllers;
+
+import org.springframework.stereotype.Controller;
+import <span class="skimlinks-unlinked">org.springframework.web.bind.annotation.GetMapping</span>;
+import <span class="skimlinks-unlinked">org.springframework.ui.Model</span>;
+
+/**
+ * Created by saurabh on 2/10/17.
+ */
+
+@Controller
+public class IndexController {
+
+    @GetMapping("/")
+    public String index(Model m) {
+        m.addAttribute("someAttribute", "someValue");
+        return "index";
+    }
+}</pre>
+<p>9.) Create a directory called views in WEB-INF. In that directory, add a file called <span class="skimlinks-unlinked">index.jsp</span>. Add the following line in &lt;body&gt;, to display the model attribute:</p>
+<pre>&lt;p&gt;${someAttribute}&lt;/p&gt;</pre>
+<p>10.) Select Edit Run Configurations -&gt; Tomcat -&gt; Local.</p>
+<p>11.) Look at the warnings. Click on Fix, and select the option with ‘war-exploded’ when asked to select the artifact to deploy.</p>
+<p><a href="https://iamsaurabh.files.wordpress.com/2017/02/3-fix-problems.png"><img data-attachment-id="351" data-permalink="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/3-fix-problems/" data-orig-file="https://iamsaurabh.files.wordpress.com/2017/02/3-fix-problems.png" data-orig-size="1024,744" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="3-fix-problems" data-image-description="" data-medium-file="https://iamsaurabh.files.wordpress.com/2017/02/3-fix-problems.png?w=300&amp;h=218" data-large-file="https://iamsaurabh.files.wordpress.com/2017/02/3-fix-problems.png?w=529" class="alignnone size-medium wp-image-351" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/3-fix-problems.png" alt="3-fix-problems" width="300" height="218" srcset="https://iamsaurabh.files.wordpress.com/2017/02/3-fix-problems.png?w=300&amp;h=218 300w, https://iamsaurabh.files.wordpress.com/2017/02/3-fix-problems.png?w=600&amp;h=436 600w, https://iamsaurabh.files.wordpress.com/2017/02/3-fix-problems.png?w=150&amp;h=109 150w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p>12.) Run the application. Hopefully you should get the output of the model information.</p>
+<p><a href="https://iamsaurabh.files.wordpress.com/2017/02/output-maven.png"><img data-attachment-id="352" data-permalink="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/output-maven/" data-orig-file="https://iamsaurabh.files.wordpress.com/2017/02/output-maven.png" data-orig-size="1365,526" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="output-maven" data-image-description="" data-medium-file="https://iamsaurabh.files.wordpress.com/2017/02/output-maven.png?w=300&amp;h=116" data-large-file="https://iamsaurabh.files.wordpress.com/2017/02/output-maven.png?w=529" class="alignnone size-medium wp-image-352" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/output-maven.png" alt="output-maven" width="300" height="116" srcset="https://iamsaurabh.files.wordpress.com/2017/02/output-maven.png?w=300&amp;h=116 300w, https://iamsaurabh.files.wordpress.com/2017/02/output-maven.png?w=600&amp;h=232 600w, https://iamsaurabh.files.wordpress.com/2017/02/output-maven.png?w=150&amp;h=58 150w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p>&nbsp;</p>
+<p>Hopefully this long post helps kick start the development, and spares the pain that I had to go through over the period of 4 days <img draggable="false" class="emoji" alt="😉" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/1f609.svg" scale="0"></p>
+<div id="atatags-370373-5b72bac4827c9">
+        <script type="text/javascript">
+            __ATA.cmd.push(function() {
+                __ATA.initVideoSlot('atatags-370373-5b72bac4827c9', {
+                    sectionId: '370373',
+                    format: 'inread'
+                });
+            });
+        </script>
+    </div>		<div class="wpcnt">
+			<div class="wpa wpmrec">
+				<span class="wpa-about">Advertisements</span>
+				<div class="u">		<div style="padding-bottom:15px;width:300px;height:250px;float:left;margin-right:5px;margin-top:0px">
+		<div id="atatags-26942-5b72bac4827f0" style="width: auto; height: auto;"><div style="width: 300px; height: 250px;"><iframe frameborder="0" scrolling="no" width="300" height="250" style="border:none;overflow:hidden;width:300px;height:250px;" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/saved_resource(12).html"></iframe></div><div id="atatags-26942-5b72bac4827f0__controls" style="width:300px;height:10px;text-align:right;line-height:6px;"><span id="atatags-26942-5b72bac4827f0__complain-btn" style="font-size: 10px; color: rgb(109, 171, 210); text-decoration: underline; cursor: pointer; display: inline;">Report this ad</span></div></div></div>		<div style="padding-bottom:15px;width:300px;height:250px;float:left;margin-top:0px">
+		<div id="atatags-114160-5b72bac4827f2" style="width: auto; height: auto;"><div style="width: 300px; height: 250px;"><iframe frameborder="0" scrolling="no" width="300" height="250" style="border:none;overflow:hidden;width:300px;height:250px;" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/saved_resource(13).html"></iframe></div><div id="atatags-114160-5b72bac4827f2__controls" style="width:300px;height:10px;text-align:right;line-height:6px;"><span id="atatags-114160-5b72bac4827f2__complain-btn" style="font-size: 10px; color: rgb(109, 171, 210); text-decoration: underline; cursor: pointer; display: inline;">Report this ad</span></div></div></div></div>
+				
+			</div>
+		</div><div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-344" class="share-facebook sd-button share-icon" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?share=facebook&amp;nb=1" target="_blank" title="Click to share on Facebook"><span>Facebook<span class="share-count">13</span></span></a></li><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-344" class="share-twitter sd-button share-icon" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?share=twitter&amp;nb=1" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-linkedin"><a rel="nofollow noopener noreferrer" data-shared="sharing-linkedin-344" class="share-linkedin sd-button share-icon" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?share=linkedin&amp;nb=1" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-9337676-344-5b72bac484d82" data-src="//widgets.wp.com/likes/index.html?ver=20180319#blog_id=9337676&amp;post_id=344&amp;origin=iamsaurabh.wordpress.com&amp;obj_id=9337676-344-5b72bac484d82" data-name="like-post-frame-9337676-344-5b72bac484d82"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px; display: none;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><iframe class="post-likes-widget jetpack-likes-widget" name="like-post-frame-9337676-344-5b72bac484d82" height="55px" width="100%" frameborder="0" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/index.html"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-minimal"><p class="jp-relatedposts-post jp-relatedposts-post0" data-post-id="223" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://iamsaurabh.wordpress.com/2014/03/04/conf-kde-in-2014/" title="conf.kde.in 2014
+
+I had the opportunity to attend conf.kde.in 2014 at DAIICT, Gandhinagar recently. Having missed the previous edition in 2011, due to not being aware of the event, and the fact that I was not using KDE back then, this one was a must attend. I had booked my tickets quite…" rel="nofollow" data-origin="344" data-position="0">conf.kde.in 2014</a></span><span class="jp-relatedposts-post-context">In "General"</span></p><p class="jp-relatedposts-post jp-relatedposts-post1" data-post-id="122" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://iamsaurabh.wordpress.com/2012/03/18/music-player-and-gsoc-12/" title="Music Player and GSoC &#39;12
+
+Since last year, I have been interested in learning how Phonon and GStreamer work. So, last year, I had started work to develop a music player that uses the Phonon framework. I designed the layout, and some classes for the player, and then went into hibernation for about four months.…" rel="nofollow" data-origin="344" data-position="1">Music Player and GSoC '12</a></span><span class="jp-relatedposts-post-context">In "General"</span></p><p class="jp-relatedposts-post jp-relatedposts-post2" data-post-id="284" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://iamsaurabh.wordpress.com/2015/11/09/noflo-and-angular-js/" title="NoFlo and Angular.js
+
+I have been procrastinating about this post for almost a month. Over that period, I have tinkered around with NoFlo and Angular.js. Earlier, I was creating components for Node-red at my workplace. However, as it is more inclined towards the Internet of Things, whereas NoFlo is more oriented towards Web…" rel="nofollow" data-origin="344" data-position="2">NoFlo and Angular.js</a></span><span class="jp-relatedposts-post-context">In "General"</span></p></div></div></div>					</div><!-- end .post-entry -->
+	</div><!-- end .post-content -->
+
+	</article><!-- #post-344 -->
+
+			<nav id="nav-below" class="clear-fix">
+				<h1 class="assistive-text">Post navigation</h1>
+				<span class="nav-previous"><a href="https://iamsaurabh.wordpress.com/2016/11/17/calhacks/" rel="prev">← Previous post</a></span>
+				<span class="nav-next"><a href="https://iamsaurabh.wordpress.com/2017/04/08/weekend-project-amazon-alexa-skill/" rel="next">Next post →</a></span>
+			</nav><!-- #nav-below -->
+
+			<div id="comments">
+	
+	
+			<h3 id="comments-title">
+			<span>20</span> thoughts on “Configure a Spring MVC Project with Intellij&nbsp;IDEA”		</h3>
+
+		
+		<ol class="commentlist">
+			
+			<li class="comment even thread-even depth-1 highlander-comment" id="comment-325">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/photo.jpg" class="avatar avatar-32" height="32" width="32" srcset="https://i1.wp.com/lh3.googleusercontent.com/--GCmg7S7Pmw/AAAAAAAAAAI/AAAAAAAAAYw/5m5c2rGNjo8/photo.jpg?resize=32%2C32&amp;ssl=1&amp;zoom=2 1.5x" scale="1.5">						<span><a href="https://plus.google.com/101616020653097471523" rel="external nofollow" class="url">Nyagaka Enock</a></span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-325"><time pubdate="" datetime="2017-03-21T11:14:55+00:00">March 21, 2017 at 11:14 am</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>Thanks man</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=325#respond" onclick="return addComment.moveForm( &quot;comment-325&quot;, &quot;325&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to Nyagaka Enock">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+
+			<li class="comment byuser comment-author-aurevoirxavier odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-327">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/909bbb3588749dff17e631795623a6bf.jpeg" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32" originals="32" src-orig="https://0.gravatar.com/avatar/909bbb3588749dff17e631795623a6bf?s=32&amp;d=identicon&amp;r=G" scale="2" id="grav-909bbb3588749dff17e631795623a6bf-0">						<span><a href="http://gravatar.com/aurevoirxavier" rel="external nofollow" class="url">aurevoirxavier</a></span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-327"><time pubdate="" datetime="2017-04-26T10:06:29+00:00">April 26, 2017 at 10:06 am</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>Thanks, it help me a lot.</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=327#respond" onclick="return addComment.moveForm( &quot;comment-327&quot;, &quot;327&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to aurevoirxavier">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+
+			<li class="comment even thread-even depth-1 highlander-comment" id="comment-328">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/dceebef93a64d1af76abed7a0f6d6021" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32" originals="32" src-orig="https://1.gravatar.com/avatar/dceebef93a64d1af76abed7a0f6d6021?s=32&amp;d=identicon&amp;r=G" scale="2" id="grav-dceebef93a64d1af76abed7a0f6d6021-0">						<span>Den</span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-328"><time pubdate="" datetime="2017-04-28T06:38:19+00:00">April 28, 2017 at 6:38 am</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>A HUGE THANKS ,GOOD MAN , for your tutorial,I couldn’t configure IDEA till a had found this article</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=328#respond" onclick="return addComment.moveForm( &quot;comment-328&quot;, &quot;328&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to Den">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+
+			<li class="comment byuser comment-author-geekcodes odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-330">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/4f440af3626f8e543e037c8b96e811d2.jpeg" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32" originals="32" src-orig="https://1.gravatar.com/avatar/4f440af3626f8e543e037c8b96e811d2?s=32&amp;d=identicon&amp;r=G" scale="2" id="grav-4f440af3626f8e543e037c8b96e811d2-0">						<span><a href="http://gravatar.com/geekcodes" rel="external nofollow" class="url">geekcodes</a></span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-330"><time pubdate="" datetime="2017-05-04T13:33:53+00:00">May 4, 2017 at 1:33 pm</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>Thank you, very valuable for people trying to develop using IntelliJ IDEA editor</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=330#respond" onclick="return addComment.moveForm( &quot;comment-330&quot;, &quot;330&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to geekcodes">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+
+			<li class="comment byuser comment-author-harshits14 even thread-even depth-1 highlander-comment" id="comment-333">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/0d14649af4acc8b838e221824f9bdd74(1).jpeg" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32" originals="32" src-orig="https://0.gravatar.com/avatar/0d14649af4acc8b838e221824f9bdd74?s=32&amp;d=identicon&amp;r=G" scale="2" id="grav-0d14649af4acc8b838e221824f9bdd74-0">						<span><a href="http://iamharshit.wordpress.com/" rel="external nofollow" class="url">Harshit</a></span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-333"><time pubdate="" datetime="2017-05-14T20:37:47+00:00">May 14, 2017 at 8:37 pm</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>Reblogged this on <a href="http://harshits.in/2017/05/15/configure-a-spring-mvc-project-with-intellij-idea/" rel="nofollow">Harshit Shrivastava</a> and commented:<br>
+A nice post by a friend on configuring Spring MVC project.</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=333#respond" onclick="return addComment.moveForm( &quot;comment-333&quot;, &quot;333&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to Harshit">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+
+			<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-334">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/picture" class="avatar avatar-32" height="32" width="32" srcset="https://i1.wp.com/graph.facebook.com/v2.2/1407378592655311/picture?q=type%3Dlarge%26_md5%3D1f3ef50c97ba7e98c56e32ca756379a0&amp;resize=32%2C32&amp;zoom=2 1.5x" scale="1.5">						<span><a href="https://www.facebook.com/app_scoped_user_id/1407378592655311/" rel="external nofollow" class="url">Nikita Savchenko</a></span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-334"><time pubdate="" datetime="2017-05-17T22:38:42+00:00">May 17, 2017 at 10:38 pm</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>Many thanks for this tutorial! It helped me a lot.</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=334#respond" onclick="return addComment.moveForm( &quot;comment-334&quot;, &quot;334&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to Nikita Savchenko">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+
+			<li class="comment byuser comment-author-vitaliebordiniuc even thread-even depth-1 highlander-comment" id="comment-335">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/d5e5737189f58e1fcb15d3a48c64c30a.jpeg" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32" originals="32" src-orig="https://1.gravatar.com/avatar/d5e5737189f58e1fcb15d3a48c64c30a?s=32&amp;d=identicon&amp;r=G" scale="2" id="grav-d5e5737189f58e1fcb15d3a48c64c30a-0">						<span><a href="http://codingideasblog.wordpress.com/" rel="external nofollow" class="url">Vitalie Bordiniuc</a></span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-335"><time pubdate="" datetime="2017-05-19T18:11:30+00:00">May 19, 2017 at 6:11 pm</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>thanks</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=335#respond" onclick="return addComment.moveForm( &quot;comment-335&quot;, &quot;335&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to Vitalie Bordiniuc">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+
+			<li class="comment byuser comment-author-vitaliebordiniuc odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-336">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/d5e5737189f58e1fcb15d3a48c64c30a.jpeg" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32" originals="32" src-orig="https://1.gravatar.com/avatar/d5e5737189f58e1fcb15d3a48c64c30a?s=32&amp;d=identicon&amp;r=G" scale="2" id="grav-d5e5737189f58e1fcb15d3a48c64c30a-1">						<span><a href="http://codingideasblog.wordpress.com/" rel="external nofollow" class="url">Vitalie Bordiniuc</a></span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-336"><time pubdate="" datetime="2017-05-19T18:16:56+00:00">May 19, 2017 at 6:16 pm</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>Reblogged this on <a href="http://codingideas.blog/2017/05/19/configure-a-spring-mvc-project-with-intellij-idea/" rel="nofollow">Coding ideas</a>.</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=336#respond" onclick="return addComment.moveForm( &quot;comment-336&quot;, &quot;336&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to Vitalie Bordiniuc">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+
+			<li class="comment even thread-even depth-1 highlander-comment" id="comment-337">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/727743a5ee2d5db7a96757f7bbb045e2" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32" originals="32" src-orig="https://1.gravatar.com/avatar/727743a5ee2d5db7a96757f7bbb045e2?s=32&amp;d=identicon&amp;r=G" scale="2" id="grav-727743a5ee2d5db7a96757f7bbb045e2-0">						<span>ben</span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-337"><time pubdate="" datetime="2017-05-23T17:07:04+00:00">May 23, 2017 at 5:07 pm</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>Thank you this saved me alot of time. The only thing I had to correct was this part</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=337#respond" onclick="return addComment.moveForm( &quot;comment-337&quot;, &quot;337&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to ben">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+
+			<li class="comment odd alt thread-odd thread-alt depth-1 parent highlander-comment" id="comment-344">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/photo(1).jpg" class="avatar avatar-32" height="32" width="32" srcset="https://i0.wp.com/lh5.googleusercontent.com/-0QczfpqrQqk/AAAAAAAAAAI/AAAAAAAAABA/vkjaKBVn1dA/photo.jpg?resize=32%2C32&amp;ssl=1&amp;zoom=2 1.5x" scale="1.5">						<span><a href="https://plus.google.com/113049297525990584832" rel="external nofollow" class="url">丁钦颖</a></span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-344"><time pubdate="" datetime="2017-06-08T00:59:08+00:00">June 8, 2017 at 12:59 am</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>Thx~ It’s very clear. Would you mind if I translate it to Chinese?</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=344#respond" onclick="return addComment.moveForm( &quot;comment-344&quot;, &quot;344&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to 丁钦颖">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		<ul class="children">
+
+			<li class="comment byuser comment-author-iamsaurabh bypostauthor even depth-2 highlander-comment" id="comment-349">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/22960897a3e8cd8b05abc9bc0c52789b.jpeg" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32" id="grav-22960897a3e8cd8b05abc9bc0c52789b-0" originals="32" src-orig="https://2.gravatar.com/avatar/22960897a3e8cd8b05abc9bc0c52789b?s=32&amp;d=identicon&amp;r=G" scale="2">						<span>Saurabh</span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-349"><time pubdate="" datetime="2017-06-18T19:16:47+00:00">June 18, 2017 at 7:16 pm</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>go right ahead! <img draggable="false" class="emoji" alt="🙂" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/1f642.svg" scale="0"></p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=349#respond" onclick="return addComment.moveForm( &quot;comment-349&quot;, &quot;349&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to Saurabh">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+			<li class="comment odd alt thread-even depth-1 highlander-comment" id="comment-360">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/f4821780f2ab9e7edb7c5a22005955d1" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32" originals="32" src-orig="https://0.gravatar.com/avatar/f4821780f2ab9e7edb7c5a22005955d1?s=32&amp;d=identicon&amp;r=G" scale="2" id="grav-f4821780f2ab9e7edb7c5a22005955d1-0">						<span>Aleks</span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-360"><time pubdate="" datetime="2017-07-02T19:33:04+00:00">July 2, 2017 at 7:33 pm</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>Thanks and from me. It’s very helpful for me.</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=360#respond" onclick="return addComment.moveForm( &quot;comment-360&quot;, &quot;360&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to Aleks">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+
+			<li class="comment byuser comment-author-shashankiam even thread-odd thread-alt depth-1 highlander-comment" id="comment-363">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/7993cf5cdfdc4066a6feb348fff660b0.jpeg" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32" id="grav-7993cf5cdfdc4066a6feb348fff660b0-0" originals="32" src-orig="https://1.gravatar.com/avatar/7993cf5cdfdc4066a6feb348fff660b0?s=32&amp;d=identicon&amp;r=G" scale="2">						<span><a href="http://drugofdriving.wordpress.com/" rel="external nofollow" class="url">shashankiam</a></span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-363"><time pubdate="" datetime="2017-07-10T18:14:47+00:00">July 10, 2017 at 6:14 pm</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>Thanks man, I’ve trying to fix my errors in IntelliJ and turns out that <span class="skimlinks-unlinked">index.jsp</span> was causing the problem, I moved it into views folder and it started working.</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=363#respond" onclick="return addComment.moveForm( &quot;comment-363&quot;, &quot;363&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to shashankiam">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+
+			<li class="comment byuser comment-author-dsuepke odd alt thread-even depth-1 highlander-comment" id="comment-374">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/35e8d13948bb9a96f6bee09efbd6b8dd.png" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32" originals="32" src-orig="https://0.gravatar.com/avatar/35e8d13948bb9a96f6bee09efbd6b8dd?s=32&amp;d=identicon&amp;r=G" scale="2" id="grav-35e8d13948bb9a96f6bee09efbd6b8dd-0">						<span>dsuepke</span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-374"><time pubdate="" datetime="2017-08-13T13:30:42+00:00">August 13, 2017 at 1:30 pm</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>Thanks, that was the first tutorial that made Spring MVC work for me in IntelliJ</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=374#respond" onclick="return addComment.moveForm( &quot;comment-374&quot;, &quot;374&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to dsuepke">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+
+			<li class="comment even thread-odd thread-alt depth-1 highlander-comment" id="comment-377">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/picture(1)" class="avatar avatar-32" height="32" width="32" srcset="https://i2.wp.com/graph.facebook.com/v2.9/2114876031892697/picture?q=type%3Dlarge%26_md5%3De1026def9a39a8493a939c1f24b7a6ff&amp;resize=32%2C32&amp;zoom=2 1.5x" scale="1.5">						<span><a href="https://www.facebook.com/app_scoped_user_id/2114876031892697/" rel="external nofollow" class="url">Alugbin LordRahl Abiodun Olutola</a></span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-377"><time pubdate="" datetime="2017-09-06T19:43:57+00:00">September 6, 2017 at 7:43 pm</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>This is highly appreciated…</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=377#respond" onclick="return addComment.moveForm( &quot;comment-377&quot;, &quot;377&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to Alugbin LordRahl Abiodun Olutola">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+
+			<li class="comment odd alt thread-even depth-1 highlander-comment" id="comment-378">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/e2600766fb9785ab96bd1cd3ac179ee2.jpeg" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32" id="grav-e2600766fb9785ab96bd1cd3ac179ee2-0" originals="32" src-orig="https://2.gravatar.com/avatar/e2600766fb9785ab96bd1cd3ac179ee2?s=32&amp;d=identicon&amp;r=G" scale="2">						<span>alca</span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-378"><time pubdate="" datetime="2017-09-19T07:53:20+00:00">September 19, 2017 at 7:53 am</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>thank you very much</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=378#respond" onclick="return addComment.moveForm( &quot;comment-378&quot;, &quot;378&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to alca">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+
+			<li class="comment even thread-odd thread-alt depth-1 parent highlander-comment" id="comment-380">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/a45c3652752d602b594db8abb1b3054a" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32" id="grav-a45c3652752d602b594db8abb1b3054a-0" originals="32" src-orig="https://1.gravatar.com/avatar/a45c3652752d602b594db8abb1b3054a?s=32&amp;d=identicon&amp;r=G" scale="2">						<span>Jay</span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-380"><time pubdate="" datetime="2017-10-01T21:35:40+00:00">October 1, 2017 at 9:35 pm</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>Thanks so much Saurabh for posting what you learned.</p>
+<p>I think that your deployment descriptor in your <span class="skimlinks-unlinked">pom.xml</span> got its format messed up when you copied and pasted it.  I’ll try copying and pasting it here, it may mess up mine too:</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=380#respond" onclick="return addComment.moveForm( &quot;comment-380&quot;, &quot;380&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to Jay">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		<ul class="children">
+
+			<li class="comment odd alt depth-2 highlander-comment" id="comment-381">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/a45c3652752d602b594db8abb1b3054a" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32" id="grav-a45c3652752d602b594db8abb1b3054a-1" originals="32" src-orig="https://1.gravatar.com/avatar/a45c3652752d602b594db8abb1b3054a?s=32&amp;d=identicon&amp;r=G" scale="2">						<span>Jay</span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-381"><time pubdate="" datetime="2017-10-01T22:56:03+00:00">October 1, 2017 at 10:56 pm</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>A couple more comments.  If you’re copying and pasting from the blog, you may need to replace all of the double-quotes (or possibly other characters) that your IntelliJ may not recognize.  Also, the <span class="skimlinks-unlinked">IndexController.java</span> file should go into the src/main/java/org/saurabhsood/controllers directory.</p>
+<p>Thanks again Saurabh!</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=381#respond" onclick="return addComment.moveForm( &quot;comment-381&quot;, &quot;381&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to Jay">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+			<li class="comment even thread-even depth-1 highlander-comment" id="comment-382">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/photo(2).jpg" class="avatar avatar-32" height="32" width="32" srcset="https://i1.wp.com/lh5.googleusercontent.com/-pefl9k9R_6E/AAAAAAAAAAI/AAAAAAAAAZA/ph8lrPwP5UQ/photo.jpg?resize=32%2C32&amp;ssl=1&amp;zoom=2 1.5x" scale="1.5">						<span><a href="https://plus.google.com/101694309992700875381" rel="external nofollow" class="url">wenlong luo</a></span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-382"><time pubdate="" datetime="2017-10-12T06:13:46+00:00">October 12, 2017 at 6:13 am</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>i think this post is better:<a href="https://spring.io/guides/gs/rest-service/#scratch" rel="nofollow">https://spring.io/guides/gs/rest-service/#scratch</a></p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=382#respond" onclick="return addComment.moveForm( &quot;comment-382&quot;, &quot;382&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to wenlong luo">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+
+			<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-387">
+
+				<div class="comment-heading clear-fix">
+					<p class="comment-author">
+						<img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/ca9444b3240317d8fbebe5b331d4ff18" class="avatar avatar-32 grav-hashed grav-hijack" height="32" width="32" originals="32" src-orig="https://0.gravatar.com/avatar/ca9444b3240317d8fbebe5b331d4ff18?s=32&amp;d=identicon&amp;r=G" scale="2" id="grav-ca9444b3240317d8fbebe5b331d4ff18-0">						<span>Dimuthu Suranga</span> <em>said:</em>					</p>
+					<p class="comment-date">
+						<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-387"><time pubdate="" datetime="2017-11-21T10:58:29+00:00">November 21, 2017 at 10:58 am</time></a>					</p>
+				</div>
+				<div class="comment-text">
+					<p>Good Work.<br>
+Thank You</p>
+										<p class="reply-link"><a rel="nofollow" class="comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/?replytocom=387#respond" onclick="return addComment.moveForm( &quot;comment-387&quot;, &quot;387&quot;, &quot;respond&quot;, &quot;344&quot; )" aria-label="Reply to Dimuthu Suranga">Reply</a></p>
+					<p class="edit-comment"></p>
+				</div>
+		</li><!-- #comment-## -->
+		</ol>
+
+		
+	
+		<div id="respond" class="comment-respond js">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://iamsaurabh.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="e55ef9c041"><input type="hidden" name="_wp_http_referer" value="/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/">
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none 0s ease 0s; height: 0px !important; min-height: 0px !important; font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; text-decoration: none solid rgba(0, 0, 0, 0.7); word-spacing: 0px; text-indent: 0px; line-height: normal; width: 515px;" class="autosizejs "></textarea><textarea id="comment" name="comment" title="Enter your comment here..." placeholder="Enter your comment here..." style="height: 36px; overflow: hidden; word-wrap: break-word; resize: none;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-form-guest" id="postas-guest" class="nascar-signin-link" title="Login via Guest">
+									</a>
+			</li>
+			<li>
+				<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-form-load-service:WordPress.com" id="postas-wordpress" class="nascar-signin-link" title="Login via WordPress.com">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#0087be" d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.05-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.57zM3.008 12c0 3.56 2.07 6.634 5.068 8.092L3.788 8.342c-.5 1.117-.78 2.354-.78 3.658zm15.06-.454c0-1.112-.398-1.88-.74-2.48-.456-.74-.883-1.368-.883-2.11 0-.825.627-1.595 1.51-1.595.04 0 .078.006.116.008-1.598-1.464-3.73-2.36-6.07-2.36-3.14 0-5.904 1.613-7.512 4.053.21.008.41.012.58.012.94 0 2.395-.114 2.395-.114.484-.028.54.684.057.74 0 0-.487.058-1.03.086l3.275 9.74 1.968-5.902-1.4-3.838c-.485-.028-.944-.085-.944-.085-.486-.03-.43-.77.056-.742 0 0 1.484.114 2.368.114.94 0 2.397-.114 2.397-.114.486-.028.543.684.058.74 0 0-.488.058-1.03.086l3.25 9.665.897-2.997c.456-1.17.684-2.137.684-2.907zm1.82-3.86c.04.286.06.593.06.924 0 .912-.17 1.938-.683 3.22l-2.746 7.94c2.672-1.558 4.47-4.454 4.47-7.77 0-1.564-.4-3.033-1.1-4.314zM12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"></path></g></svg>				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/saved_resource(14).html" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"></iframe>
+			</li>
+			<li>
+				<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-form-load-service:Twitter" id="postas-twitter" class="nascar-signin-link" title="Login via Twitter">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#1DA1F2" d="M22.23 5.924c-.736.326-1.527.547-2.357.646.847-.508 1.498-1.312 1.804-2.27-.793.47-1.67.812-2.606.996C18.325 4.498 17.258 4 16.078 4c-2.266 0-4.103 1.837-4.103 4.103 0 .322.036.635.106.935-3.41-.17-6.433-1.804-8.457-4.287-.353.607-.556 1.312-.556 2.064 0 1.424.724 2.68 1.825 3.415-.673-.022-1.305-.207-1.86-.514v.052c0 1.988 1.415 3.647 3.293 4.023-.344.095-.707.145-1.08.145-.265 0-.522-.026-.773-.074.522 1.63 2.038 2.817 3.833 2.85-1.404 1.1-3.174 1.757-5.096 1.757-.332 0-.66-.02-.98-.057 1.816 1.164 3.973 1.843 6.29 1.843 7.547 0 11.675-6.252 11.675-11.675 0-.178-.004-.355-.012-.53.802-.578 1.497-1.3 2.047-2.124z"></path></g></svg>				</a>
+			</li>
+			<li>
+				<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#comment-form-load-service:Facebook" id="postas-facebook" class="nascar-signin-link" title="Login via Facebook">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#3B5998" d="M20.007 3H3.993C3.445 3 3 3.445 3 3.993v16.013c0 .55.445.994.993.994h8.62v-6.97H10.27V11.31h2.346V9.31c0-2.325 1.42-3.59 3.494-3.59.993 0 1.847.073 2.096.106v2.43h-1.438c-1.128 0-1.346.537-1.346 1.324v1.734h2.69l-.35 2.717h-2.34V21h4.587c.548 0 .993-.445.993-.993V3.993c0-.548-.445-.993-.993-.993z"></path></g></svg>				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/ad516503a11cd5ca435acc9bb6523536" alt="Gravatar" width="25" class="no-grav" originals="25" scale="2">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="url" value=""></div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/ad516503a11cd5ca435acc9bb6523536" alt="WordPress.com Logo" width="25" class="no-grav" originals="25" scale="2">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="">
+						<p class="comment-form-posting-as pa-wordpress">
+			<strong></strong>
+			You are commenting using your <span class="skimlinks-unlinked">WordPress.com</span> account.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;wordpress&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;
+				<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#0087be" d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.05-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.57zM3.008 12c0 3.56 2.07 6.634 5.068 8.092L3.788 8.342c-.5 1.117-.78 2.354-.78 3.658zm15.06-.454c0-1.112-.398-1.88-.74-2.48-.456-.74-.883-1.368-.883-2.11 0-.825.627-1.595 1.51-1.595.04 0 .078.006.116.008-1.598-1.464-3.73-2.36-6.07-2.36-3.14 0-5.904 1.613-7.512 4.053.21.008.41.012.58.012.94 0 2.395-.114 2.395-.114.484-.028.54.684.057.74 0 0-.487.058-1.03.086l3.275 9.74 1.968-5.902-1.4-3.838c-.485-.028-.944-.085-.944-.085-.486-.03-.43-.77.056-.742 0 0 1.484.114 2.368.114.94 0 2.397-.114 2.397-.114.486-.028.543.684.058.74 0 0-.488.058-1.03.086l3.25 9.665.897-2.997c.456-1.17.684-2.137.684-2.907zm1.82-3.86c.04.286.06.593.06.924 0 .912-.17 1.938-.683 3.22l-2.746 7.94c2.672-1.558 4.47-4.454 4.47-7.77 0-1.564-.4-3.033-1.1-4.314zM12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"></path></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/ad516503a11cd5ca435acc9bb6523536" alt="Google+ photo" width="25" class="no-grav" originals="25" scale="2">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="">
+						<p class="comment-form-posting-as pa-googleplus">
+			<strong></strong>
+			You are commenting using your Google+ account.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;googleplus&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;
+				<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" x="0px" y="0px" viewBox="0 0 60 60"><path fill="#519bf7" d="M56.3,30c0,-1.6 -0.2,-3.4 -0.6,-5h-3.1H42.2H30v10.6h14.8C44,39.3 42,42 39.1,43.9l8.8,6.8C53,46 56.3,39 56.3,30z"></path><path fill="#3db366" d="M30,57.5c6.7,0 13.1,-2.4 17.9,-6.8l-8.8,-6.8c-2.5,1.6 -5.6,2.4 -9.1,2.4c-7.2,0 -13.3,-4.7 -15.4,-11.2l-9.3,7.1C9.8,51.3 19.1,57.5 30,57.5z"></path><path fill="#fdc600" d="M5.3,42.2l9.3,-7.1c-0.5,-1.6 -0.8,-3.3 -0.8,-5.1s0.3,-3.5 0.8,-5.1l-9.3,-7.1C3.5,21.5 2.5,25.6 2.5,30S3.5,38.5 5.3,42.2z"></path><path fill="#f15b44" d="M40.1,17.4l8,-8C43.3,5.1 37,2.5 30,2.5C19.1,2.5 9.8,8.7 5.3,17.8l9.3,7.1c2.1,-6.5 8.2,-11.1 15.4,-11.1C33.9,13.7 37.4,15.1 40.1,17.4z"></path></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/ad516503a11cd5ca435acc9bb6523536" alt="Twitter picture" width="25" class="no-grav" originals="25" scale="2">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="">
+						<p class="comment-form-posting-as pa-twitter">
+			<strong></strong>
+			You are commenting using your Twitter account.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;twitter&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;
+				<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#1DA1F2" d="M22.23 5.924c-.736.326-1.527.547-2.357.646.847-.508 1.498-1.312 1.804-2.27-.793.47-1.67.812-2.606.996C18.325 4.498 17.258 4 16.078 4c-2.266 0-4.103 1.837-4.103 4.103 0 .322.036.635.106.935-3.41-.17-6.433-1.804-8.457-4.287-.353.607-.556 1.312-.556 2.064 0 1.424.724 2.68 1.825 3.415-.673-.022-1.305-.207-1.86-.514v.052c0 1.988 1.415 3.647 3.293 4.023-.344.095-.707.145-1.08.145-.265 0-.522-.026-.773-.074.522 1.63 2.038 2.817 3.833 2.85-1.404 1.1-3.174 1.757-5.096 1.757-.332 0-.66-.02-.98-.057 1.816 1.164 3.973 1.843 6.29 1.843 7.547 0 11.675-6.252 11.675-11.675 0-.178-.004-.355-.012-.53.802-.578 1.497-1.3 2.047-2.124z"></path></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/ad516503a11cd5ca435acc9bb6523536" alt="Facebook photo" width="25" class="no-grav" originals="25" scale="2">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="">
+						<p class="comment-form-posting-as pa-facebook">
+			<strong></strong>
+			You are commenting using your Facebook account.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;facebook&#39; );">Log&nbsp;Out</a>&nbsp;/&nbsp;
+				<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#3B5998" d="M20.007 3H3.993C3.445 3 3 3.445 3 3.993v16.013c0 .55.445.994.993.994h8.62v-6.97H10.27V11.31h2.346V9.31c0-2.325 1.42-3.59 3.494-3.59.993 0 1.847.073 2.096.106v2.43h-1.438c-1.128 0-1.346.537-1.346 1.324v1.734h2.69l-.35 2.717h-2.34V21h4.587c.548 0 .993-.445.993-.993V3.993c0-.548-.445-.993-.993-.993z"></path></g></svg></span>
+		</p>
+		w
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe" style="display: none;">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of new comments via email.</label></p></div>
+
+
+
+
+<p class="form-submit" style="display: none;"><input name="submit" type="submit" id="comment-submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="344" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="8caf62f2ae"></p>
+<input type="hidden" name="genseq" value="1534245572">
+<p style="display: none;"></p>			<input type="hidden" id="ak_js" name="ak_js" value="1534245577705"></form>
+			</div><!-- #respond -->
+	<div style="clear: both"></div>
+</div><!-- #comments -->
+
+		
+		</div><!-- end #content -->
+	</div><!-- end #primary -->
+
+	
+	<div id="secondary" class="widget-area" role="complementary">
+		
+		<aside id="gravatar-3" class="sidebar-widget widget_gravatar"><h1 class="widget-title">Gravatar</h1><p><img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/22960897a3e8cd8b05abc9bc0c52789b(1).jpeg" class="avatar avatar-128 grav-widget-none grav-hashed grav-hijack" height="128" width="128" originals="128" src-orig="https://2.gravatar.com/avatar/22960897a3e8cd8b05abc9bc0c52789b?s=128&amp;d=identicon&amp;r=G" scale="2" id="grav-22960897a3e8cd8b05abc9bc0c52789b-1"></p>
+</aside><aside id="blog-stats-2" class="sidebar-widget widget_blog-stats"><h1 class="widget-title">Blog Stats</h1>		<ul>
+			<li>67,267 hits</li>
+		</ul>
+		</aside><aside id="media_image-3" class="sidebar-widget widget_media_image"><h1 class="widget-title">openSUSE Counter</h1><style>.widget.widget_media_image { overflow: hidden; }.widget.widget_media_image img { height: auto; max-width: 100%; }</style><a href="http://counter.opensuse.org/link/" class="" rel="" target=""><img class="image alignnone" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/small.png" alt="Could not locate image" width="130" height="130" scale="0"></a></aside><aside id="search-3" class="sidebar-widget widget_search"><h1 class="widget-title">Search</h1>
+<form method="get" action="https://iamsaurabh.wordpress.com//">
+	<div>
+		<label for="s" class="assistive-text">Search:</label>
+		<input type="text" value="Search…" name="s" id="s" onfocus="this.value=&#39;&#39;">
+		<input type="submit" name="search" value="Go">
+	</div>
+</form>
+</aside><aside id="archives-3" class="sidebar-widget widget_archive"><h1 class="widget-title">Archives</h1>		<ul>
+			<li><a href="https://iamsaurabh.wordpress.com/2017/04/">April 2017</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2017/02/">February 2017</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2016/11/">November 2016</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2016/10/">October 2016</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2016/05/">May 2016</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2016/02/">February 2016</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2016/01/">January 2016</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2015/12/">December 2015</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2015/11/">November 2015</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2015/09/">September 2015</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2015/08/">August 2015</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2015/03/">March 2015</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2015/01/">January 2015</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2014/11/">November 2014</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2014/10/">October 2014</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2014/09/">September 2014</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2014/07/">July 2014</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2014/04/">April 2014</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2014/03/">March 2014</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2014/02/">February 2014</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2013/12/">December 2013</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2013/10/">October 2013</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2013/08/">August 2013</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2013/07/">July 2013</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2013/06/">June 2013</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2013/05/">May 2013</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2013/04/">April 2013</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2013/03/">March 2013</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2013/02/">February 2013</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2013/01/">January 2013</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2012/12/">December 2012</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2012/10/">October 2012</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2012/09/">September 2012</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2012/08/">August 2012</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2012/07/">July 2012</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2012/06/">June 2012</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2012/05/">May 2012</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2012/03/">March 2012</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2012/02/">February 2012</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2011/12/">December 2011</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2011/11/">November 2011</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2011/08/">August 2011</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2011/07/">July 2011</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2011/06/">June 2011</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2011/04/">April 2011</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2011/01/">January 2011</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2010/10/">October 2010</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2010/08/">August 2010</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2010/04/">April 2010</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2010/03/">March 2010</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2010/02/">February 2010</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2010/01/">January 2010</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2009/12/">December 2009</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2009/11/">November 2009</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2009/10/">October 2009</a></li>
+	<li><a href="https://iamsaurabh.wordpress.com/2009/09/">September 2009</a></li>
+		</ul>
+		</aside><aside id="linkcat-1356" class="sidebar-widget widget_links"><h1 class="widget-title">Blogroll</h1>
+	<ul class="xoxo blogroll">
+<li><a href="http://silverkrypt.tumblr.com/" title="The musings of a pilgrim on the road to nowhere">Claustere</a></li>
+<li><a href="http://iamgauravsood.wordpress.com/" title="Gaurav Sood">Gaurav Sood</a></li>
+<li><a href="http://www.mobremote.com/" title="Your Cellphone is your computer’s Remote">MobRemote</a></li>
+<li><a href="http://niteshnarayanlal.blogspot.com/">Nitesh</a></li>
+
+	</ul>
+</aside>
+<aside id="categories-2" class="sidebar-widget widget_categories"><h1 class="widget-title">Categories</h1>		<ul>
+	<li class="cat-item cat-item-8823"><a href="https://iamsaurabh.wordpress.com/category/bizarre/" title="Somethings which defy logic and doesnt make much sense to me">Bizarre</a>
+</li>
+	<li class="cat-item cat-item-2016"><a href="https://iamsaurabh.wordpress.com/category/college/" title="Topics related to my college life">College</a>
+</li>
+	<li class="cat-item cat-item-10177272"><a href="https://iamsaurabh.wordpress.com/category/conference-2/">Conference</a>
+</li>
+	<li class="cat-item cat-item-780"><a href="https://iamsaurabh.wordpress.com/category/development/">Development</a>
+</li>
+	<li class="cat-item cat-item-54"><a href="https://iamsaurabh.wordpress.com/category/general/" title="Anything that can fit in just about anywhere. Sort of ramblings.">General</a>
+</li>
+	<li class="cat-item cat-item-35100485"><a href="https://iamsaurabh.wordpress.com/category/gsoc-2/">gsoc</a>
+</li>
+	<li class="cat-item cat-item-32403763"><a href="https://iamsaurabh.wordpress.com/category/hackathons/">Hackathons</a>
+</li>
+	<li class="cat-item cat-item-34922710"><a href="https://iamsaurabh.wordpress.com/category/linux-2/">linux</a>
+</li>
+	<li class="cat-item cat-item-2480813"><a href="https://iamsaurabh.wordpress.com/category/manipal-university/" title="Anything interesting related to my college Manipal University">Manipal University</a>
+</li>
+	<li class="cat-item cat-item-3607"><a href="https://iamsaurabh.wordpress.com/category/nostalgia/">Nostalgia</a>
+</li>
+	<li class="cat-item cat-item-1184"><a href="https://iamsaurabh.wordpress.com/category/off-topic/">Off Topic</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="https://iamsaurabh.wordpress.com/category/open-source/">Open Source</a>
+</li>
+	<li class="cat-item cat-item-234820"><a href="https://iamsaurabh.wordpress.com/category/opensuse/" title="Posts related to openSUSE">openSUSE</a>
+</li>
+	<li class="cat-item cat-item-2008"><a href="https://iamsaurabh.wordpress.com/category/projects/">Projects</a>
+</li>
+	<li class="cat-item cat-item-1473"><a href="https://iamsaurabh.wordpress.com/category/reading/">Reading</a>
+</li>
+	<li class="cat-item cat-item-1115"><a href="https://iamsaurabh.wordpress.com/category/shorts/">Shorts</a>
+</li>
+	<li class="cat-item cat-item-581"><a href="https://iamsaurabh.wordpress.com/category/software/" title="Software Reviews and basically anything related to the software that I use and endorse.">Software</a>
+</li>
+	<li class="cat-item cat-item-6976"><a href="https://iamsaurabh.wordpress.com/category/studies/">Studies</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://iamsaurabh.wordpress.com/category/technology/" title="Anything that happens in the field of technology and catches my eye, enough to blog about">Technology</a>
+</li>
+		</ul>
+</aside><aside id="pages-3" class="sidebar-widget widget_pages"><h1 class="widget-title">Pages</h1>		<ul>
+			<li class="page_item page-item-111"><a href="https://iamsaurabh.wordpress.com/about-me/">About Me</a></li>
+		</ul>
+		</aside>		<aside id="recent-posts-2" class="sidebar-widget widget_recent_entries">		<h1 class="widget-title">Recent Activity</h1>		<ul>
+											<li>
+					<a href="https://iamsaurabh.wordpress.com/2017/04/08/weekend-project-amazon-alexa-skill/">Weekend Project – Amazon Alexa&nbsp;skill</a>
+									</li>
+											<li>
+					<a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/">Configure a Spring MVC Project with Intellij&nbsp;IDEA</a>
+									</li>
+											<li>
+					<a href="https://iamsaurabh.wordpress.com/2016/11/17/calhacks/">CalHacks</a>
+									</li>
+											<li>
+					<a href="https://iamsaurabh.wordpress.com/2016/10/03/weekend-project-with-react-js/">Weekend project with&nbsp;React.js</a>
+									</li>
+											<li>
+					<a href="https://iamsaurabh.wordpress.com/2016/05/18/the-crunch/">The Crunch</a>
+									</li>
+					</ul>
+		</aside><aside id="twitter-3" class="sidebar-widget widget_twitter"><h1 class="widget-title"><a href="http://twitter.com/saurabhsood91">Tweets</a></h1><ul class="tweets">
+			<li>
+				This thread needs to be read in it's entirety. <a href="https://twitter.com/prempanicker/status/1028946058217308162"> twitter.com/prempanicker/s…</a>.....				<a href="http://twitter.com/saurabhsood91/statuses/1029270178817691649" class="timesince">3&nbsp;hours&nbsp;ago</a>
+			</li>
+
+			
+			<li>
+				RT @<a href="http://twitter.com/arseblog">arseblog</a>: New: Hello Mr W. Anker, you are an extreme W. Anker | <a href="https://p1r.es/eXtr3m3_WaNkaaaah"> p1r.es/eXtr3m3_WaNkaa…</a> <a href="http://twitter.com/search?q=%23arsenal">#arsenal</a> <a href="http://twitter.com/search?q=%23afc">#afc</a> <a href="https://t.co/ahv0ewov14" rel="nofollow">https://t.co/ahv0ewov14</a>.....				<a href="http://twitter.com/saurabhsood91/statuses/1029263340588023809" class="timesince">4&nbsp;hours&nbsp;ago</a>
+			</li>
+
+			
+			<li>
+				RT @<a href="http://twitter.com/planetepics">planetepics</a>: Happiness= having puppies all around you!!<img draggable="false" class="emoji" alt="😍" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/1f60d.svg" scale="0"><img draggable="false" class="emoji" alt="😋" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/1f60b.svg" scale="0"><img draggable="false" class="emoji" alt="💓" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/1f493.svg" scale="0"> 
+<a href="http://instagram.com/sunnysidegoldens"> instagram.com/sunnysidegolde…</a> <a href="https://t.co/UXEl2J0mMH" rel="nofollow">https://t.co/UXEl2J0mMH</a>.....				<a href="http://twitter.com/saurabhsood91/statuses/1029186446626709506" class="timesince">9&nbsp;hours&nbsp;ago</a>
+			</li>
+
+			
+			<li>
+				RT @<a href="http://twitter.com/dog_feelings">dog_feelings</a>: if i happen. to lie down on your foot. you’re not allowed to move. you should feel honored.....				<a href="http://twitter.com/saurabhsood91/statuses/1028817284125491200" class="timesince">1&nbsp;day&nbsp;ago</a>
+			</li>
+
+			
+			<li>
+				RT @<a href="http://twitter.com/dog_rates">dog_rates</a>: Really funny, guys. Sending in a pic without a dog in it. Please don’t do this. We deserve to be taken seriously. Still 12/1….....				<a href="http://twitter.com/saurabhsood91/statuses/1028786207902162949" class="timesince">1&nbsp;day&nbsp;ago</a>
+			</li>
+
+			</ul></aside>		<div class="wpcnt">
+			<div class="wpa wpwidesky">
+				<span class="wpa-about">Advertisements</span>
+				<div class="u">
+							<div style="padding-bottom:15px;width:160px;height:600px;">
+		<div id="atatags-286348-5b72bac4f1977" style="width: auto; height: auto;"><div style="width: 160px; height: 600px;"><iframe frameborder="0" scrolling="no" width="160" height="600" style="border:none;overflow:hidden;width:160px;height:600px;" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/saved_resource(15).html"></iframe></div><div id="atatags-286348-5b72bac4f1977__controls" style="width:160px;height:10px;text-align:right;line-height:6px;"><span id="atatags-286348-5b72bac4f1977__complain-btn" style="font-size: 10px; color: rgb(109, 171, 210); text-decoration: underline; cursor: pointer; display: inline;">Report this ad</span></div></div></div>
+				</div>
+				
+			</div>
+		</div>
+	</div><!-- #secondary .widget-area -->
+
+
+		</div><!-- end #main -->
+	</div><!-- end #page-inner -->
+
+	<footer id="colophon" role="contentinfo">
+		<div id="footer">
+			<div id="footer-inner">
+				<div id="footer-inner-inner">
+					
+
+				</div><!-- end #footer-inner-inner -->
+			</div><!-- end #footer-inner -->
+		</div>
+		<div id="copyright">
+			<div id="copyright-inner">
+					<div id="copyright-inner-inner">
+					<p>
+						<a href="https://wordpress.com/?ref=footer_website">Create a free website or blog at WordPress.com.</a>
+							</p>
+				</div><!-- end #copyright-inner-inner -->
+			</div><!-- end #copyright-inner -->
+		</div><!-- end #copyright -->
+	</footer><!-- end #footer -->
+
+	<!--  -->
+<script type="text/javascript" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/gprofiles.js.tải xuống"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/wpgroho.js.tải xuống"></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-29b5c0a4aad60f59422763e4a1a8f5a1">
+	</div>
+	<div class="grofile-hash-map-909bbb3588749dff17e631795623a6bf">
+	</div>
+	<div class="grofile-hash-map-dceebef93a64d1af76abed7a0f6d6021">
+	</div>
+	<div class="grofile-hash-map-4f440af3626f8e543e037c8b96e811d2">
+	</div>
+	<div class="grofile-hash-map-0d14649af4acc8b838e221824f9bdd74">
+	</div>
+	<div class="grofile-hash-map-d32aca84f1a080b44847b066b200c347">
+	</div>
+	<div class="grofile-hash-map-d5e5737189f58e1fcb15d3a48c64c30a">
+	</div>
+	<div class="grofile-hash-map-727743a5ee2d5db7a96757f7bbb045e2">
+	</div>
+	<div class="grofile-hash-map-451ad532f2c1b6465a6133fbd489c065">
+	</div>
+	<div class="grofile-hash-map-22960897a3e8cd8b05abc9bc0c52789b">
+	</div>
+	<div class="grofile-hash-map-f4821780f2ab9e7edb7c5a22005955d1">
+	</div>
+	<div class="grofile-hash-map-7993cf5cdfdc4066a6feb348fff660b0">
+	</div>
+	<div class="grofile-hash-map-35e8d13948bb9a96f6bee09efbd6b8dd">
+	</div>
+	<div class="grofile-hash-map-768a756b70f6c911f5bb999b8a50ba30">
+	</div>
+	<div class="grofile-hash-map-e2600766fb9785ab96bd1cd3ac179ee2">
+	</div>
+	<div class="grofile-hash-map-a45c3652752d602b594db8abb1b3054a">
+	</div>
+	<div class="grofile-hash-map-34182cd6a5f8a80437b4403ff14e19fa">
+	</div>
+	<div class="grofile-hash-map-ca9444b3240317d8fbebe5b331d4ff18">
+	</div>
+	<div class="grofile-hash-map-22960897a3e8cd8b05abc9bc0c52789b">
+	</div>
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/iamsaurabh.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/iamsaurabh.wordpress.com\/wp-login.php?action=logout&_wpnonce=08b9012dae","homeURL":"https:\/\/iamsaurabh.wordpress.com\/","postID":"344","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"0","userIsLoggedIn":"","isJetpack":"","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/saved_resource(6)"></script>
+
+	<div id="carousel-reblog-box">
+		<form action="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Add your thoughts here... (optional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#" class="cancel">Cancel</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Post">
+				<input type="hidden" id="carousel-reblog-blog-id" value="9337676">
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://iamsaurabh.wordpress.com">
+				<input type="hidden" id="carousel-reblog-blog-title" value="In My Own Write">
+				<input type="hidden" id="carousel-reblog-post-url" value="">
+				<input type="hidden" id="carousel-reblog-post-title" value="">
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="622ab10f3f"><input type="hidden" name="_wp_http_referer" value="/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/">		</form>
+
+		<div class="arrow"></div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/iamsaurabh.wordpress.com\/2017\/02\/11\/configure-a-spring-mvc-project-with-intellij-idea\/":344};
+	</script>
+<script type="text/javascript" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/widgets.js.tải xuống"></script>
+<link rel="stylesheet" id="all-css-0-3" href="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/jetpack-carousel.css" type="text/css" media="all">
+<!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='https://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel-ie8fix.css?m=1412618825h&#038;ver=20121024' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var actionbardata = {"siteID":"9337676","siteName":"In My Own Write","siteURL":"http:\/\/iamsaurabh.wordpress.com","icon":"<img alt='' src='https:\/\/s2.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/chateau","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/iamsaurabh.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fiamsaurabh.wordpress.com%2F2017%2F02%2F11%2Fconfigure-a-spring-mvc-project-with-intellij-idea%2F","themeURL":"","xhrURL":"https:\/\/iamsaurabh.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"1a6ca6cbed","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"e7a800e978\" \/>","referer":"https:\/\/iamsaurabh.wordpress.com\/2017\/02\/11\/configure-a-spring-mvc-project-with-intellij-idea\/","canFollow":"1","feedID":"709920","statusMessage":"","customizeLink":"https:\/\/iamsaurabh.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fiamsaurabh.wordpress.com%2F2017%2F02%2F11%2Fconfigure-a-spring-mvc-project-with-intellij-idea%2F","postID":"344","shortlink":"https:\/\/wp.me\/pDb9G-5y","canEditPost":"","editLink":"https:\/\/wordpress.com\/post\/iamsaurabh.wordpress.com\/344","statsLink":"https:\/\/wordpress.com\/stats\/post\/344\/iamsaurabh.wordpress.com","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Chateau","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"Join 954 other followers","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/iamsaurabh.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fiamsaurabh.wordpress.com%2F2017%2F02%2F11%2Fconfigure-a-spring-mvc-project-with-intellij-idea%2F\">Log in now.<\/a>","stats":"Stats"}};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/iamsaurabh.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"1fe11ba304","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/iamsaurabh.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fiamsaurabh.wordpress.com%2F2017%2F02%2F11%2Fconfigure-a-spring-mvc-project-with-intellij-idea%2F","blog_id":"9337676","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=9337676&v=wpcom&tz=0&user_id=0&subd=iamsaurabh","is_public":"1","reblog_enabled":""};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/saved_resource(7)"></script>
+<script type="text/javascript">
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-linkedin', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<script type="text/javascript">
+	var skimlinks_pub_id = "725X584219"
+	var skimlinks_sitename = "iamsaurabh.wordpress.com";
+	</script>
+	<script type="text/javascript" defer="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/725X1342.skimlinks.js.tải xuống"></script>		<iframe src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/master.html" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+		<div id="likes-other-gravatars"><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+<script src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/w.js.tải xuống" type="text/javascript" async="" defer=""></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'9337676','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'9337676','v':'wpcom','tz':'0','user_id':'0','post':'344','subd':'iamsaurabh'}]);
+_stq.push(['extra', {'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdWFnNncxc1tjZG9XVXhRWXNzXz01bj9hWHNYbCZ4SVVyPy1bX1RHWm1zR2doUmszLkNncD1NeEhkbnxkRyVHbmtJb1t5WUJ6M2c5T1k4LWlRM0g1XV9lR3RYQyV3SmFnQkd3TC5mM01bVi5GbHRMRTdSfCtBXWtobmpwZGhrQjFdTGs0akJEQT9UX2lTOC5YV3FtSWdNY3c2ZmssalpfZjVOWVJ6LUhZSkQxW29JXVtHYi8sb2EyZU8vc1N0RHhuaEM4SENIQjJuP0xuJVoyalNhSGE9LzVbWi9BKzR6aTh6NXosbTlqZkVLaFJ8dVZkTiVzbWJaK1liW3Yubn5ZQlVBOHBTc19bNEo='}]);
+_stq.push([ 'clickTrackerInit', '9337676', '344' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script></div><div id="actionbar" class="actnbr-pub-chateau actnbr-has-follow actnbr-hidden"><ul><li class="actnbr-btn actnbr-hidden"> 			    	<a class="actnbr-action actnbr-actn-follow" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/"><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Follow</span></a> 			    	<div class="actnbr-popover tip tip-top-left actnbr-notice"> 			    		<div class="tip-arrow"></div> 			    		<div class="tip-inner actnbr-follow-bubble"></div> 			    	</div> 			    </li><li class="actnbr-ellipsis actnbr-hidden"> 			  <svg class="gridicon gridicon__ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><circle cx="5" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle></g></svg> 			  <div class="actnbr-popover tip tip-top-left actnbr-more"> 			  	<div class="tip-arrow"></div> 			  	<div class="tip-inner"> 				  <ul> 				    <li class="actnbr-sitename actnbr-hidden"><a href="http://iamsaurabh.wordpress.com/"><img alt="" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/wpcom-gray-white.png" class="avatar avatar-50" height="50" width="50" scale="0"> In My Own Write</a></li> 				   	<li class="actnbr-folded-customize actnbr-hidden"><a href="https://iamsaurabh.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Fiamsaurabh.wordpress.com%2F2017%2F02%2F11%2Fconfigure-a-spring-mvc-project-with-intellij-idea%2F"><svg class="gridicon gridicon__customize" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z" data-reactid=".2.1.1:0.1b.0"></path></g></svg><span>Customize<span></span></span></a></li> 				    <li class="actnbr-folded-follow actnbr-hidden"><a class="actnbr-action actnbr-actn-follow" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/"><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Follow</span></a></li> 					<li class="actnbr-signup actnbr-hidden"><a href="https://wordpress.com/start/">Sign up</a></li> 				    <li class="actnbr-login actnbr-hidden"><a href="https://iamsaurabh.wordpress.com/wp-login.php?redirect_to=https%3A%2F%2Fiamsaurabh.wordpress.com%2F2017%2F02%2F11%2Fconfigure-a-spring-mvc-project-with-intellij-idea%2F">Log in</a></li> 				     				    <li class="actnbr-shortlink actnbr-hidden"><a href="https://wp.me/pDb9G-5y">Copy shortlink</a></li> 				    <li class="flb-report actnbr-hidden"><a href="http://en.wordpress.com/abuse/">Report this content</a></li> 				     				     				    <li class="actnbr-subs actnbr-hidden"><a href="https://subscribe.wordpress.com/">Manage subscriptions</a></li> 				    <li class="actnbr-fold actnbr-hidden"><a href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/">Collapse this bar</a></li> 			      </ul> 			    </div> 		      </div> 		    </li> 	      </ul></div><!-- end #page -->
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/widget_iframe.1025be460f33762a866ea882e1687ff4.html" title="Twitter settings iframe" style="display: none;"></iframe><img src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/g.gif" alt=":)" id="wpstats" scale="0"><div id="lbdictex_find_popup" class="lbexpopup hidden" style="position: absolute; top: 0px; left: 0px;"><div class="lbexpopup_top"><h2 class="fl popup_title">&nbsp;</h2><ul><li><a class="close_main popup_close" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#">&nbsp;</a></li></ul><div class="clr"></div></div><div class="popup_details"></div><div class="popup_powered">abc</div></div><div id="lbdictex_ask_mark" class="hidden" style="position: absolute; top: 7439.31px; left: 258.425px;"><a class="lbdictex_ask_select" href="https://iamsaurabh.wordpress.com/2017/02/11/configure-a-spring-mvc-project-with-intellij-idea/#">&nbsp;</a></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Configure a Spring MVC Project with Intellij IDEA _ In My Own Write_files/saved_resource(16).html"></iframe></body></html>
